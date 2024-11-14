@@ -1,5 +1,4 @@
 /* style.css */
-
 body {
     display: flex;
     justify-content: center;
@@ -29,14 +28,16 @@ h1 {
 
 #player1Name {
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     border-color: maroon;
+
 }
 
 #player2Name {
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     border-color: maroon;
+
 }
 
 input[type="text"] {
@@ -112,7 +113,7 @@ th {
 }
 
 #refreshButton:hover {
-    background-color: #0056b3;
+    background-color: orange;
 }
 
 .winner {
@@ -123,4 +124,70 @@ th {
 
 #scoreTableBody {
     background-color: aqua;
+}
+
+/* Additional styles for new game mode selection */
+
+.mode-selection {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.mode-selection button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 0.75em;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background-color: orange;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.mode-selection button:hover {
+    background-color: #8B0000;
+    /* Darker maroon on hover */
+}
+
+/* Styles for input-section fields */
+.input-section input[type="text"] {
+    border: 2px solid #8B0000;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background-color: maroon;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: orange;
+}
+
+/* Style for turn message */
+#turnMessage {
+    font-size: 1.1em;
+    color: maroon;
+    margin: 15px 0;
+}
+
+/* Final message styling */
+#finalMessage {
+    font-size: 1.3em;
+    color: maroon;
+    font-weight: bold;
+    margin-top: 20px;
 }

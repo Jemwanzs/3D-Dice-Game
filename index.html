@@ -11,18 +11,31 @@
 <body>
     <div class="game-container">
         <h1>Dice Game</h1>
-        <div class="input-section">
-            <input type="text" id="player1Name" placeholder="Enter Player 1 name">
-            <input type="text" id="player2Name" placeholder="Enter Player 2 name">
+
+        <!-- Game Mode Selection -->
+        <div class="mode-selection">
+            <button onclick="selectMode('multiplayer')">Play with Another Player</button>
+            <button onclick="selectMode('computer')">Play with Computer</button>
         </div>
+
+        <!-- Player Input Section (Hidden Initially) -->
+        <div class="input-section hidden">
+            <input type="text" id="player1Name" placeholder="Enter Your Name">
+            <input type="text" id="player2Name" placeholder="Enter Player 2 name" class="hidden">
+            <button onclick="startGame()">Start Game</button>
+        </div>
+
         <p id="turnMessage"></p> <!-- To show which player's turn it is -->
-        <div class="dice-section">
+
+        <!-- Dice Section -->
+        <div class="dice-section hidden">
             <div id="dice" class="dice" onclick="rollDice()">
-                <img src="dice.png" id="diceImage" alt="Dice" />
+                <img src="dice.png" id="diceImage" alt="Dice">
             </div>
-            <p id="alertMessage" class="hidden">Please enter both names to start the game!</p>
         </div>
-        <div class="score-table">
+
+        <!-- Score Table Section -->
+        <div class="score-table hidden">
             <table>
                 <thead>
                     <tr>
@@ -43,10 +56,12 @@
                 </tfoot>
             </table>
         </div>
+
         <p id="finalMessage"></p>
-        <button id="refreshButton" onclick="resetGame()">Refresh Game</button>
+        <button id="refreshButton" onclick="resetGame()" class="hidden">Refresh Game</button>
         <audio id="rollSound" src="roll.mp3"></audio>
     </div>
+
     <script src="script.js"></script>
 </body>
 
