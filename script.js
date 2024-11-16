@@ -159,7 +159,16 @@ function updateDiceImage(roll) {
 }
 
 function playRollSound() {
-    document.getElementById("rollSound").play();
+    const rollSound = document.getElementById("rollSound");
+
+    if (rollSound) {
+        rollSound.currentTime = 0; // Restart the sound from the beginning
+        rollSound.play().catch(error => {
+            console.error("Error playing roll sound:", error);
+        });
+    } else {
+        console.error("Roll sound element not found.");
+    }
 }
 
 // Reset game
